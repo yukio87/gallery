@@ -1,0 +1,42 @@
+.pagination {
+  :global(.PaginationPage) {
+    width: 4.1rem;
+    height: 4.1rem;
+    font-weight: 500;
+    font-size: 1.8rem;
+    font-family: inherit;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border: 1px solid var(--button-border-color);
+    margin-left: -1px;
+    margin-bottom: -1px;
+
+    &:first-child {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    &:disabled {
+      border: 1px solid var(--color-grey-3);
+      margin-left: -1px;
+      margin-bottom: -1px;
+      color: var(--color-grey-3);
+    }
+
+    &:not(:global(.PaginationPage:disabled)):not(:global(.PaginationPageWithActive)):hover {
+      cursor: pointer;
+      background-color: var(--color-grey-2);
+    }
+  }
+
+  :global(.PaginationPageWithActive) {
+    cursor: pointer;
+    background-color: var(--background-color-inverse);
+    color: var(--text-color-inverse);
+  }
+}

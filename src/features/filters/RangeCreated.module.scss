@@ -1,0 +1,90 @@
+@import "../../sass/abstracts/mixins";
+
+.rangeCreated {
+  :global(.Range.Range--open) {
+    border: 1px solid var(--color-grey-4);
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  :global(.Range) {
+    @include style-filter-padding(1.5rem, 0, 1.5rem, 0);
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    row-gap: 1.5rem;
+
+    @media (max-width: 320px) {
+      font-size: 1.4rem;
+    }
+
+    :global(.Range__сontainer) {
+      grid-column: 1 / -1;
+      outline: 1px solid var(--color-grey-4);
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: var(--color-grey-1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      z-index: 1;
+
+      @media (max-width: 1024px) {
+        flex-direction: column;
+      }
+
+      @media (max-width: 320px) {
+        flex-direction: row;
+        padding: 2rem 1.75rem 2rem 1.75rem;
+      }
+    }
+
+    :global(.Range__arrow) {
+      justify-self: end;
+      padding-right: 1.8rem;
+      fill: rgba(0, 0, 0, 0.3);
+    }
+
+    :global(.Range__title) {
+      padding-left: 1.5rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.inputSmall {
+  width: 100%;
+  height: 4.5rem;
+  border-radius: 8px;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 1);
+  max-width: 9.5rem;
+  background-color: var(--sm_input-background-color);
+  border: none;
+
+  @media (max-width: 1024px) {
+    max-width: 11rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.mdash {
+  max-width: 3.2rem;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    padding: 0.75rem 0 0.75rem 0;
+  }
+}

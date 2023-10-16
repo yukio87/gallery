@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import Filters from './features/filters/Filters';
+import Pag from './features/pagination/Pag';
+import PaintingsList from './features/paintings/PaintingsList';
+import AppContainer from './ui/AppContainer';
+import Header from './ui/Header';
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            staleTime: 0,
+        },
+    },
+});
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (React.createElement(QueryClientProvider, { client: queryClient },
+        React.createElement(ReactQueryDevtools, { initialIsOpen: false }),
+        React.createElement(AppContainer, null,
+            React.createElement(Header, null),
+            React.createElement(Filters, null),
+            React.createElement(PaintingsList, null),
+            React.createElement(Pag, null))));
 }
-
 export default App;

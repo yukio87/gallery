@@ -1,0 +1,17 @@
+.app {
+  max-width: 136.6rem;
+  padding: 3.5rem 12.3rem 9.7rem;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    padding: 3.5rem 4.2rem 6.2rem 4.2rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3.5rem 3.4rem 5.4rem 3.4rem;
+  }
+
+  @media (max-width: 320px) {
+    padding: 2.5rem 2rem 3.4rem 2rem;
+  }
+}

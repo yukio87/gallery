@@ -1,0 +1,123 @@
+@import '../../sass/main.scss';
+
+.selectContainer {
+  position: relative;
+
+  :global(.Select.Select--open) {
+    border: 1px solid var(--color-grey-4);
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .selectAuthor {
+    @include style-filter-padding(1.5rem, 0, 1.5rem, 0);
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    row-gap: 1.5rem;
+
+    @media (max-width: 320px) {
+      font-size: 1.4rem;
+    }
+
+    :global(.Select__optionContainer) {
+      grid-column: 1 / -1;
+    }
+
+    :global(.simplebar-content-wrapper) {
+      outline: 1px solid var(--color-grey-4);
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: var(--color-grey-1);
+      padding-top: 1rem;
+      position: relative;
+      z-index: 1;
+
+      &::-webkit-scrollbar {
+        width: 25px;
+      }
+
+      &::-webkit-scrollbar-track {
+        margin-block: -7px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(123, 123, 123, 1);
+        border-radius: 100px;
+        border: 8px solid transparent;
+        background-clip: padding-box;
+      }
+    }
+
+    :global(.simplebar-content) {
+      height: 29rem;
+
+      @media (max-width: 1024px) {
+        height: 34.5rem;
+      }
+
+      @media (max-width: 320px) {
+        height: 42.2rem;
+      }
+    }
+
+    :global(.Select__arrow) {
+      justify-self: start;
+      fill: var(--color-grey-3);
+    }
+
+    :global(.Select__title) {
+      padding: 0 1.8rem 0 1.5rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    :global(.Select__option) {
+      cursor: pointer;
+      padding: 1rem 0 1rem 2.2rem;
+      font-weight: 500;
+      font-size: 1.6rem;
+
+      @media (max-width: 768px) {
+        padding: 1rem 0 1rem 1.5rem;
+      }
+
+      @media (max-width: 320px) {
+        padding: 1rem 0 1rem 3rem;
+      }
+
+      &:hover {
+        background-color: var(--background-color-inverse);
+        color: var(--text-color-inverse);
+      }
+    }
+
+    :global(.Select__optionName) {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.svg {
+  display: none;
+
+  path {
+    fill: inherit;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 2.1rem;
+  right: 14%;
+  width: 0.8rem;
+  height: 0.8rem;
+
+  .ic1 {
+    fill: var(--color-grey-3);
+  }
+}

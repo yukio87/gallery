@@ -1,0 +1,18 @@
+@import "../../sass/main.scss";
+
+.inputName {
+  @include style-filter-padding(1.5rem, 1.5rem, 1.5rem, 1.5rem);
+
+  &:focus {
+    border: 1px solid var(--color-grey-4);
+    outline: none;
+  }
+
+  &::placeholder {
+    color: var(--color-grey-3);
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1.4rem;
+  }
+}

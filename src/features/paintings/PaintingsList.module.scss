@@ -1,0 +1,19 @@
+.paintingsBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 3.5rem;
+  }
+
+  @media (max-width: 320px) {
+    grid-template-columns: 1fr;
+    margin-bottom: 3rem;
+  }
+}

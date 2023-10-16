@@ -1,0 +1,12 @@
+.filtersContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 4.5rem;
+
+  @media (max-width: 320px) {
+    grid-template-columns: none;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}

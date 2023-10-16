@@ -1,0 +1,57 @@
+:root {
+  &[data-theme='light'] {
+    --text-color: rgba(0, 0, 0, 1);
+    --text-color-inverse: rgba(255, 255, 255, 1);
+    --background-color: rgba(255, 255, 255, 1);
+    --background-color-inverse: rgba(0, 0, 0, 1);
+    --button-border-color: rgba(0, 0, 0, 1);
+    --filter-border-color: rgba(0, 0, 0, 0.3);
+    --filter-background-color: rgba(255, 255, 255, 1);
+    --sm_input-background-color: rgba(239, 239, 239, 1);
+    --color-grey-1: rgba(255, 255, 255, 1);
+    --color-grey-2: rgba(237, 237, 237, 1);
+    --color-grey-3: rgba(0, 0, 0, 0.3);
+    --color-grey-4: rgba(0, 0, 0, 1);
+  }
+
+  &[data-theme='dark'] {
+    --text-color: rgba(255, 255, 255, 1);
+    --text-color-inverse: rgba(0, 0, 0, 1);
+    --background-color: rgba(0, 0, 0, 1);
+    --background-color-inverse: rgba(255, 255, 255, 1);
+    --button-border-color: rgba(255, 255, 255, 1);
+    --filter-border-color: rgba(255, 255, 255, 1);
+    --filter-background-color: rgba(12, 12, 12, 1);
+    --sm_input-background-color: rgba(255, 255, 255, 1);
+    --color-grey-1: rgba(12, 12, 12, 1);
+    --color-grey-2: rgba(70, 70, 70, 1);
+    --color-grey-3: rgba(255, 255, 255, 0.3);
+    --color-grey-4: rgba(255, 255, 255, 1);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  font-size: 62.5%;
+  background-color: var(--background-color);
+  transition: all 0.1s linear;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  color: rgba(0, 0, 0, 1);
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
