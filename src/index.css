@@ -1,4 +1,4 @@
-:root[data-theme=light] {
+:root[data-theme='light'] {
   --text-color: rgba(0, 0, 0, 1);
   --text-color-inverse: rgba(255, 255, 255, 1);
   --background-color: rgba(255, 255, 255, 1);
@@ -12,7 +12,7 @@
   --color-grey-3: rgba(0, 0, 0, 0.3);
   --color-grey-4: rgba(0, 0, 0, 1);
 }
-:root[data-theme=dark] {
+:root[data-theme='dark'] {
   --text-color: rgba(255, 255, 255, 1);
   --text-color-inverse: rgba(0, 0, 0, 1);
   --background-color: rgba(0, 0, 0, 1);
@@ -42,7 +42,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   color: rgb(0, 0, 0);
 }
