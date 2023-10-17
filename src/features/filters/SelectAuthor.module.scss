@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: 9fr 1fr;
     row-gap: 1.5rem;
+    cursor: pointer;
 
     @media (max-width: 320px) {
       font-size: 1.4rem;
@@ -23,6 +24,7 @@
 
     :global(.Select__optionContainer) {
       grid-column: 1 / -1;
+      cursor: default;
     }
 
     :global(.simplebar-content-wrapper) {
@@ -116,6 +118,7 @@
   right: 14%;
   width: 0.8rem;
   height: 0.8rem;
+  cursor: pointer;
 
   .ic1 {
     fill: var(--color-grey-3);

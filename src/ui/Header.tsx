@@ -7,7 +7,7 @@ import styles from './Header.module.scss';
 function Header(): React.JSX.Element {
   return (
     <header className={styles.header}>
-      <img src="../../logo.svg" alt="logo" />
+      <img src="./logo.svg" alt="logo" />
       <Theme />
     </header>
   );
