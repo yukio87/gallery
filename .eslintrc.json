@@ -20,7 +20,7 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./src/tsconfig.json"
+    "project": "./tsconfig.json"
   },
   "plugins": ["react", "import", "prettier", "react-hooks", "jsx-a11y", "@typescript-eslint"],
   "ignorePatterns": ["*.js"],

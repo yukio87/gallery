@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "compile:sass": "sass --watch src/sass/main.scss src/index.css",
-    "tsc:w": "tsc -p ./src -w",
+    "tsc:w": "tsc -p ./ -w",
     "deploy": "gh-pages -d build",
     "predeploy": "npm run build"
   },
